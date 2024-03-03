@@ -12,3 +12,5 @@ ORM (Object Relational Mapping):
 - Convert relational objects of database into object oriented types
 - OR Designer is a tool that can do this
 (New Project -> Form, View -> Server Explorer)
+
+Direct SQL in C#: https://learn.microsoft.com/de-de/azure/azure-sql/database/connect-query-dotnet-visual-studio
