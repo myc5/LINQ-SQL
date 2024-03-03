@@ -1,0 +1,9 @@
+Using LINQ for SQL:
+- LINQ syntax gets checked by compiler before it hits the SQL server, possible performance gain over SQL which will hit the SQL server first, then check correctness
+	(No SQL statements in double quotes; strings get ignored by the compiler, hence it won't know if the syntax is correct)
+- Type Safe, don't need to know the data types because this gets verified on the client (IntelliSense should help here)
+- Object Oriented:
+	Table			=>	Class
+	Columns			=>	- Property
+	Rows/Records	=>	- Instance
+	Stored Proced.	=>	- Methods

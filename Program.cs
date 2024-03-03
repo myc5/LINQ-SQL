@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections;
+
 
 // CTRL + K + D to format
 namespace LINQ_SQL
@@ -30,6 +28,7 @@ namespace LINQ_SQL
                 }
 
             }
+            Console.WriteLine("Non-LINQ Version:");
             Console.WriteLine($"Values above {val}\nCount: {count}\nList: ");
 
             int l = 0;
@@ -60,7 +59,8 @@ namespace LINQ_SQL
             foreach(int num in arr2) { Console.WriteLine(num); }
             */
 
-            /* LINQ version:
+            /* LINQ version, assuming a table like below
+             * Like Django, this works via CRUD [Create (Insert), Read (Select), Update, Delete]
             Table_1
             ------
             Col_1
@@ -73,12 +73,21 @@ namespace LINQ_SQL
             100
             55
 
-            SELECT Col_1
+            SELECT Col_1 // AS <Alias>
             FROM Table_1
             WHERE Col_1 > 40
-            ORDER BY Col_1 DESC;
+            ORDER BY Col_1 DESC; // WHERE/GROUP BY/HAVING/ORDER BY (in that order)
             */
 
+            // from <alias> in <coll | arr> [<clauses>] select <alias> // for LINQ order is different and alias is mandatory
+            var arr3 =
+                from i in arr
+                where i > 40
+                orderby i descending
+                select i;
+            Console.WriteLine("LINQ Version:");
+            foreach (var i in arr3) {  Console.Write(i+" "); }
+            Console.ReadLine();
         }
     }
 }
