@@ -7,3 +7,8 @@ Using LINQ for SQL:
 	Columns			=>	- Property
 	Rows/Records	=>	- Instance
 	Stored Proced.	=>	- Methods
+
+ORM (Object Relational Mapping):
+- Convert relational objects of database into object oriented types
+- OR Designer is a tool that can do this
+(New Project -> Form, View -> Server Explorer)
